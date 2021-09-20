@@ -1,0 +1,75 @@
+    # Project definitions (do not edit)
+Task: dlc-dog-pose
+scorer: mike
+date: Sep20
+multianimalproject: false
+identity:
+
+    # Project path (change when moving around)
+project_path: C:\Users\mikef\Documents\GitHub\dog-pose-estimation\dlc-dog-pose-mike-2021-09-20
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  ? C:\Users\mikef\Documents\GitHub\dog-pose-estimation\dlc-dog-pose-mike-2021-09-20\videos\130D99A6-89D6-4E55-B7A5-E8C3DCBB74CB.mov
+  : crop: 0, 1440, 0, 1920
+  C:\Users\mikef\Documents\GitHub\dog-pose-estimation\dlc-dog-pose-mike-2021-09-20\videos\IMG_0040.MOV:
+    crop: 0, 1440, 0, 1920
+  C:\Users\mikef\Documents\GitHub\dog-pose-estimation\dlc-dog-pose-mike-2021-09-20\videos\IMG_0124.MOV:
+    crop: 0, 1920, 0, 1080
+  C:\Users\mikef\Documents\GitHub\dog-pose-estimation\dlc-dog-pose-mike-2021-09-20\videos\IMG_0186.MOV:
+    crop: 0, 1440, 0, 1920
+  C:\Users\mikef\Documents\GitHub\dog-pose-estimation\dlc-dog-pose-mike-2021-09-20\videos\IMG_0188.MOV:
+    crop: 0, 1440, 0, 1920
+  C:\Users\mikef\Documents\GitHub\dog-pose-estimation\dlc-dog-pose-mike-2021-09-20\videos\IMG_0195.MOV:
+    crop: 0, 1440, 0, 1920
+  C:\Users\mikef\Documents\GitHub\dog-pose-estimation\dlc-dog-pose-mike-2021-09-20\videos\IMG_0234.MOV:
+    crop: 0, 1440, 0, 1920
+  C:\Users\mikef\Documents\GitHub\dog-pose-estimation\dlc-dog-pose-mike-2021-09-20\videos\IMG_0273.MOV:
+    crop: 0, 1440, 0, 1920
+  C:\Users\mikef\Documents\GitHub\dog-pose-estimation\dlc-dog-pose-mike-2021-09-20\videos\IMG_0318.MOV:
+    crop: 0, 1920, 0, 1440
+  C:\Users\mikef\Documents\GitHub\dog-pose-estimation\dlc-dog-pose-mike-2021-09-20\videos\IMG_0508.MOV:
+    crop: 0, 1440, 0, 1920
+bodyparts:
+- bodypart1
+- bodypart2
+- bodypart3
+- objectA
+start: 0
+stop: 1
+numframes2pick: 20
+
+    # Plotting configuration
+skeleton:
+- - bodypart1
+  - bodypart2
+- - objectA
+  - bodypart3
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 12
+alphavalue: 0.7
+colormap: rainbow
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: -1
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
